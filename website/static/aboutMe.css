@@ -1,0 +1,201 @@
+.about-animate-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, #0f2027, #232526, #434343, #2c5364);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease-in-out infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.about-animate-bg::before, .about-animate-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  filter: blur(32px);
+  animation: floatAnim 12s infinite alternate cubic-bezier(.77,0,.175,1);
+}
+
+.about-animate-bg::before {
+  width: 340px; height: 340px;
+  left: 10vw; top: 18vh;
+  background: linear-gradient(120deg, #434343 0%, #232526 100%);
+  animation-delay: 0s;
+}
+
+.about-animate-bg::after {
+  width: 220px; height: 220px;
+  right: 12vw; bottom: 14vh;
+  background: linear-gradient(120deg, #232526 0%, #434343 100%);
+  animation-delay: 2s;
+}
+
+@keyframes floatAnim {
+  0%   { transform: translateY(0) scale(1);}
+  100% { transform: translateY(40px) scale(1.08);}
+}
+
+/* Animated gradient border for about-container */
+.about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 4rem auto;
+  background: rgba(30,30,30,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  padding: 3rem 2.5rem;
+  color: #f5f7fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  animation: aboutBounceIn 1.2s cubic-bezier(.77,0,.175,1), aboutFloat 6s ease-in-out infinite 1.2s;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 3px;
+  background: linear-gradient(120deg, #434343, #232526, #434343, #181818);
+  background-size: 200% 200%;
+  animation: borderGradientMove 8s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes borderGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aboutBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(60px);
+    box-shadow: 0 0px 0px rgba(44,83,100,0.00);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 16px 48px rgba(44,83,100,0.22);
+  }
+  80% {
+    transform: scale(0.98) translateY(4px);
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  }
+}
+
+/* Optional: gentle floating animation after bounce-in */
+.about-container {
+  animation: aboutBounceIn 1.2s cubic-bezier(.77,0,.175,1), aboutFloat 6s ease-in-out infinite 1.2s;
+}
+
+@keyframes aboutFloat {
+  0%   { transform: translateY(0) scale(1);}
+  50%  { transform: translateY(-10px) scale(1.01);}
+  100% { transform: translateY(0) scale(1);}
+}
+
+@keyframes fadeInAbout {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Animated underline for h1 */
+.about-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #f5f7fa;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  animation: textPop 1.2s cubic-bezier(.77,0,.175,1);
+  position: relative;
+}
+
+.about-container h1::after {
+  content: '';
+  display: block;
+  margin: 0.7rem auto 0 auto;
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #434343 0%, #232526 100%);
+  animation: underlineGrow 1.2s cubic-bezier(.77,0,.175,1);
+}
+
+@keyframes underlineGrow {
+  0% { width: 0; opacity: 0; }
+  100% { width: 80px; opacity: 1; }
+}
+
+/* Fade-in and slide-up for paragraphs */
+.about-container p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #f5f7fa;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInAbout 1.6s cubic-bezier(.77,0,.175,1) forwards;
+}
+
+.about-container p:nth-of-type(1) { animation-delay: 1.3s; }
+.about-container p:nth-of-type(2) { animation-delay: 1.5s; }
+.about-container p:nth-of-type(3) { animation-delay: 1.7s; }
+.about-container p:nth-of-type(4) { animation-delay: 1.9s; }
+
+/* Subtle glowing effect on strong tags */
+.about-container strong {
+  font-weight: bold;
+  color: inherit;
+  background: none;
+  padding: 0 2px;
+  border-radius: 2px;
+  box-shadow: 0 0 8px 0 rgba(255,255,255,0.08);
+  animation: strongGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes strongGlow {
+  0% { box-shadow: 0 0 8px 0 rgba(255,255,255,0.08);}
+  100% { box-shadow: 0 0 16px 2px rgba(255,255,255,0.18);}
+}
+
+@media (max-width: 700px) {
+  .about-container {
+    padding: 1.2rem 0.7rem;
+    margin: 2rem 0.5rem;
+  }
+  .about-container h1 {
+    font-size: 1.4rem;
+  }
+  .about-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+nav {
+  z-index: 10;
+  position: relative;
+}
+
+.about-layout {
+  margin-top: 0; /* Don't push content over navbar */
+}

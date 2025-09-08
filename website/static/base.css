@@ -12,9 +12,9 @@ nav {
   background: var(--nav-bg);
   box-shadow: var(--nav-shadow);
   border-radius: var(--nav-radius);
-  padding: 1rem 2rem;
+  padding: 1.5rem 3rem; /* Increased padding for bigger navbar */
   margin: 2rem auto;
-  max-width: 900px;
+  max-width: 1100px;    /* Increased max-width */
   animation: navFadeIn 1.2s cubic-bezier(.77,0,.175,1) both;
 }
 
@@ -40,10 +40,10 @@ nav {
 .navbar a {
   color: var(--nav-link);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.25rem;   /* Slightly larger font size */
   font-weight: 600;
   letter-spacing: 0.05em;
-  padding: 0.5rem 0.8rem;
+  padding: 0.7rem 1.2rem; /* More padding for bigger clickable area */
   border-radius: 8px;
   transition: 
     color 0.3s cubic-bezier(.77,0,.175,1),
