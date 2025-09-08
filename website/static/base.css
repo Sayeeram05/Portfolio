@@ -1,0 +1,121 @@
+:root {
+  --nav-bg: linear-gradient(90deg, #0f2027, #2c5364);
+  --nav-link: #fff;
+  --nav-hover: #00bcd4;
+  --nav-underline: #00bcd4;
+  --nav-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  --nav-radius: 16px;
+  --nav-font: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+nav {
+  background: var(--nav-bg);
+  box-shadow: var(--nav-shadow);
+  border-radius: var(--nav-radius);
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  animation: navFadeIn 1.2s cubic-bezier(.77,0,.175,1) both;
+}
+
+@keyframes navFadeIn {
+  0% { opacity: 0; transform: translateY(-30px) scale(0.95);}
+  100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--nav-font);
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  color: var(--nav-link);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: 
+    color 0.3s cubic-bezier(.77,0,.175,1),
+    background 0.3s cubic-bezier(.77,0,.175,1),
+    box-shadow 0.3s cubic-bezier(.77,0,.175,1);
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 80%;
+  height: 3px;
+  background: var(--nav-underline);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(.77,0,.175,1);
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: var(--nav-hover);
+  background: rgba(0,188,212,0.08);
+  box-shadow: 0 2px 8px rgba(0,188,212,0.15);
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  transform: scaleX(1);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  /* Animated dark gradient background (no blue) */
+  background: linear-gradient(120deg, #0f2027, #232526, #434343, #2c5364);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease-in-out infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: Add a subtle overlay for depth */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: rgba(255,255,255,0.04);
+  z-index: 0;
+}
+
+@media (max-width: 700px) {
+  nav {
+    max-width: 98vw;
+    padding: 0.5rem 0.5rem;
+  }
+  .navbar {
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+}
