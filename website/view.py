@@ -17,3 +17,7 @@ def skill():
 @view.route("/projects")
 def projects():
     return render_template("projects.html")
+
+@view.route("/education")
+def education():
+    return render_template("education.html")
