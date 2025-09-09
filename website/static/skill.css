@@ -1,0 +1,176 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #000000, #00354e, #000000, #00354e);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container and text colors based on background */
+.skills-title {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #b8e3ff; /* Light blue for contrast */
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  position: relative;
+  animation: textPop 1.2s cubic-bezier(.77,0,.175,1);
+}
+.skills-title::after {
+  content: '';
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 120px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #00bcd4 0%, #00354e 100%);
+  animation: underlineGrow 1.2s cubic-bezier(.77,0,.175,1);
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  background: rgba(0, 20, 40, 0.85); /* Deep blue-black */
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,53,78,0.18);
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  animation: aboutBounceIn 1.2s cubic-bezier(.77,0,.175,1);
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+.skills-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 4px;
+  background: linear-gradient(120deg, #00bcd4, #00354e, #000000, #00354e);
+  background-size: 200% 200%;
+  animation: borderGradientMove 8s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.skill-category {
+  background: rgba(0, 20, 40, 0.96);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,53,78,0.10);
+  padding: 1.5rem 1rem;
+  animation: fadeInAbout 1.6s cubic-bezier(.77,0,.175,1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+}
+.skill-category:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,188,212,0.22);
+  border-color: #00bcd4;
+}
+
+.skill-category h3 {
+  color: #00bcd4;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background: linear-gradient(90deg, #00bcd4 0%, #00354e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  padding-left: 1.2em;
+  position: relative;
+  animation: fadeInAbout 1.8s cubic-bezier(.77,0,.175,1);
+  color: #b8e3ff; /* Light blue for readability */
+  transition: color 0.3s;
+}
+.skill-category li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  background: linear-gradient(90deg, #00bcd4 0%, #00354e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #00bcd4;
+  transition: color 0.3s;
+}
+.skill-category li:hover {
+  color: #00bcd4;
+}
+.skill-category li:hover::before {
+  color: #b8e3ff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes underlineGrow {
+  0% { width: 0; opacity: 0; }
+  100% { width: 120px; opacity: 1; }
+}
+
+@keyframes aboutBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(60px);
+    box-shadow: 0 0px 0px rgba(44,83,100,0.00);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 16px 48px rgba(44,83,100,0.22);
+  }
+  80% {
+    transform: scale(0.98) translateY(4px);
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  }
+}
+
+@keyframes fadeInAbout {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 700px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    padding: 1.2rem 0.7rem;
+    margin: 2rem 0.5rem;
+  }
+  .skills-title {
+    font-size: 1.4rem;
+  }
+  .skill-category h3 {
+    font-size: 1.1rem;
+  }
+  .skill-category li {
+    font-size: 1rem;
+  }
+}

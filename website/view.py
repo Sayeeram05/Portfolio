@@ -9,3 +9,7 @@ def homePage():
 @view.route("/aboutMe")
 def aboutMe():
     return render_template("aboutMe.html")
+
+@view.route("/skill")
+def skill():
+    return render_template("skill.html")

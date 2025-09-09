@@ -1,21 +1,33 @@
 :root {
-  --nav-bg: linear-gradient(90deg, #0f2027, #2c5364);
-  --nav-link: #fff;
+  --nav-bg: linear-gradient(90deg, #000000, #00354e, #000000, #00354e);
+  --nav-link: #b8e3ff;
   --nav-hover: #00bcd4;
   --nav-underline: #00bcd4;
-  --nav-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  --nav-shadow: 0 4px 24px rgba(0,53,78,0.15);
   --nav-radius: 16px;
   --nav-font: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #000000, #00354e, #000000, #00354e);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease-in-out infinite;
+  color: #b8e3ff;
+  font-family: var(--nav-font);
+  margin: 0;
+  padding: 0;
 }
 
 nav {
   background: var(--nav-bg);
   box-shadow: var(--nav-shadow);
   border-radius: var(--nav-radius);
-  padding: 1.5rem 3rem; /* Increased padding for bigger navbar */
+  padding: 1.5rem 3rem;
   margin: 2rem auto;
-  max-width: 1100px;    /* Increased max-width */
+  max-width: 1100px;
   animation: navFadeIn 1.2s cubic-bezier(.77,0,.175,1) both;
+  position: relative;
+  z-index: 10;
 }
 
 @keyframes navFadeIn {
@@ -24,12 +36,12 @@ nav {
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
   list-style: none;
-  margin: 0;
+  display: flex;
+  gap: 2rem;
+  background: transparent;
   padding: 0;
+  margin: 0;
   font-family: var(--nav-font);
 }
 
@@ -40,10 +52,10 @@ nav {
 .navbar a {
   color: var(--nav-link);
   text-decoration: none;
-  font-size: 1.25rem;   /* Slightly larger font size */
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 500;
   letter-spacing: 0.05em;
-  padding: 0.7rem 1.2rem; /* More padding for bigger clickable area */
+  padding: 0.7rem 1.2rem;
   border-radius: 8px;
   transition: 
     color 0.3s cubic-bezier(.77,0,.175,1),
@@ -77,19 +89,6 @@ nav {
 .navbar a:hover::after,
 .navbar a:focus::after {
   transform: scaleX(1);
-}
-
-body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  /* Animated dark gradient background (no blue) */
-  background: linear-gradient(120deg, #0f2027, #232526, #434343, #2c5364);
-  background-size: 300% 300%;
-  animation: gradientMove 18s ease-in-out infinite;
-  position: relative;
-  overflow-x: hidden;
 }
 
 @keyframes gradientMove {

@@ -1,18 +1,20 @@
+body {
+  background: linear-gradient(120deg, #000000, #00354e, #000000, #00354e);
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease-in-out infinite;
+  color: #b8e3ff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; 
+}
+
 .about-animate-bg {
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(120deg, #0f2027, #232526, #434343, #2c5364);
+  background: linear-gradient(120deg, #000000, #00354e, #000000, #00354e);
   background-size: 300% 300%;
   animation: gradientMove 18s ease-in-out infinite;
   overflow: hidden;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 .about-animate-bg::before, .about-animate-bg::after {
@@ -49,15 +51,14 @@
   z-index: 1;
   max-width: 900px;
   margin: 4rem auto;
-  background: rgba(30,30,30,0.85);
+  background: rgba(0, 20, 40, 0.85);
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  box-shadow: 0 8px 32px rgba(0,53,78,0.18);
   padding: 3rem 2.5rem;
-  color: #f5f7fa;
+  color: #b8e3ff;
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   animation: aboutBounceIn 1.2s cubic-bezier(.77,0,.175,1), aboutFloat 6s ease-in-out infinite 1.2s;
   will-change: transform;
-  overflow: hidden;
 }
 
 .about-container::before {
@@ -121,7 +122,7 @@
 .about-container h1 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: #f5f7fa;
+  color: #b8e3ff;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-align: center;
@@ -150,7 +151,7 @@
   font-size: 1.15rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: #f5f7fa;
+  color: #b8e3ff;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInAbout 1.6s cubic-bezier(.77,0,.175,1) forwards;
@@ -164,12 +165,10 @@
 /* Subtle glowing effect on strong tags */
 .about-container strong {
   font-weight: bold;
-  color: inherit;
+  color: #00bcd4;
   background: none;
   padding: 0 2px;
   border-radius: 2px;
-  box-shadow: 0 0 8px 0 rgba(255,255,255,0.08);
-  animation: strongGlow 2.5s ease-in-out infinite alternate;
 }
 
 @keyframes strongGlow {

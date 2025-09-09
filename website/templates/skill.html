@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Skills | Sayeeram R</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='skill.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="skills">
+  <h2 class="skills-title">SKILLS</h2>
+  <div class="skills-container">
+
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C</li>
+        <li>C++</li>
+      </ul>
+    </div>
+
+    <!-- Languages & Frameworks -->
+    <div class="skill-category">
+      <h3>Languages & Frameworks</h3>
+      <ul>
+        <li>Java Swing</li>
+        <li>Tkinter</li>
+        <li>Flask</li>
+      </ul>
+    </div>
+
+    <!-- Tools & Technologies -->
+    <div class="skill-category">
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li>MySQL</li>
+        <li>MySQL Connector</li>
+        <li>SQLite</li>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Jupyter Notebook</li>
+        <li>Anaconda</li>
+        <li>MS Word</li>
+        <li>MS Excel</li>
+        <li>PowerPoint</li>
+      </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skill-category">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Data Structures</li>
+        <li>Algorithms</li>
+        <li>Machine Learning</li>
+        <li>Natural Language Processing (NLP)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
