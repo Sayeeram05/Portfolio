@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Certifications | Sayeeram R</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='certification.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="certification">
+  <h2 class="certification-title">Certifications</h2>
+  <div class="certification-flex">
+    <!-- Technical Certifications (Left) -->
+    <div class="certification-column">
+      <h3 class="cert-section-title">Technical Certifications</h3>
+      <div class="certification-item">
+        <h4>Core Java</h4>
+        <p><strong>SRM Infotech, Villupuram</strong> | Aug 2022 – Nov 2022</p>
+        <p>Gained knowledge of Java programming concepts, which helped in building strong fundamentals for academic and personal projects.</p>
+      </div>
+      <div class="certification-item">
+        <h4>Diploma in Computer Application (Programming)</h4>
+        <p><strong>SRM Infotech, Villupuram</strong> | Jun 2022 – Dec 2022</p>
+        <p>Learnt MS Word, Excel, PowerPoint, and Python programming. This course helped shape my career path in Computer Science by building a strong base in software tools and programming fundamentals.</p>
+      </div>
+    </div>
+    <!-- Other Certifications (Right) -->
+    <div class="certification-column">
+      <h3 class="cert-section-title">Other Certifications</h3>
+      <div class="certification-item">
+        <h4>Data Structures & Algorithms in Python</h4>
+        <p><strong>GeeksforGeeks</strong> | Currently Learning</p>
+        <p>Comprehensive DSA course designed to strengthen problem-solving skills and prepare for coding interviews through Python-based implementations.</p>
+        <ul>
+          <li>45+ hours of premium content</li>
+          <li>200+ practice problems with Python code support</li>
+          <li>250+ MCQs & 10 coding contests</li>
+          <li>Beginner-friendly, no prior DSA knowledge required</li>
+          <li>Focused on SDE interview preparation (Microsoft, Amazon, etc.)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

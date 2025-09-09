@@ -21,3 +21,7 @@ def projects():
 @view.route("/education")
 def education():
     return render_template("education.html")
+
+@view.route("/certification")
+def certification():
+    return render_template("certification.html")
