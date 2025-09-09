@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Projects | Sayeeram R</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
+{% endblock %}
+
+{% block body %}
+<section id="projects">
+  <h2 class="projects-title">Projects</h2>
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-front">
+        <h3>CashBook</h3>
+        <div class="project-icon">💰</div>
+      </div>
+      <div class="project-back">
+        <h3>CashBook</h3>
+        <p><strong>Description:</strong> Expense tracker desktop app for managing personal finances.</p>
+        <p><strong>Tech Stack:</strong> Java Swing, MySQL</p>
+        <p><strong>Type:</strong> Academic</p>
+        <div class="project-links">
+          <a href="https://github.com/Sayeeram05/CashBook" target="_blank">GitHub</a>
+          <a href="/projects/cashbook">Learn More</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-front">
+        <h3>Cross Modality Text Summarizer</h3>
+        <div class="project-icon">📝</div>
+      </div>
+      <div class="project-back">
+        <h3>Text Summarizer</h3>
+        <p><strong>Description:</strong> NLP-based tool for summarizing text from multiple sources.</p>
+        <p><strong>Tech Stack:</strong> Python, NLP, Flask</p>
+        <p><strong>Type:</strong> Personal</p>
+        <div class="project-links">
+          <a href="https://github.com/Sayeeram05/TextSummarizer" target="_blank">GitHub</a>
+          <a href="/projects/text-summarizer">Learn More</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-front">
+        <h3>Payroll Management System</h3>
+        <div class="project-icon">💼</div>
+      </div>
+      <div class="project-back">
+        <h3>Payroll System</h3>
+        <p><strong>Description:</strong> Web app for payroll automation and employee management.</p>
+        <p><strong>Tech Stack:</strong> Flask, SQLite, HTML/CSS</p>
+        <p><strong>Type:</strong> Academic</p>
+        <div class="project-links">
+          <a href="https://github.com/Sayeeram05/PayrollSystem" target="_blank">GitHub</a>
+          <a href="/projects/payroll">Learn More</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project 4 -->
+    <div class="project-card">
+      <div class="project-front">
+        <h3>Restaurant Recommendation Chatbot</h3>
+        <div class="project-icon">🍽️</div>
+      </div>
+      <div class="project-back">
+        <h3>Restaurant Chatbot</h3>
+        <p><strong>Description:</strong> AI chatbot for restaurant recommendations using NLP.</p>
+        <p><strong>Tech Stack:</strong> Python, Flask, NLP</p>
+        <p><strong>Type:</strong> Hackathon</p>
+        <div class="project-links">
+          <a href="https://github.com/Sayeeram05/RestaurantChatbot" target="_blank">GitHub</a>
+          <a href="/projects/restaurant-chatbot">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

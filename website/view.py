@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, views
 
 view = Blueprint("view",__name__)
 
@@ -13,3 +13,7 @@ def aboutMe():
 @view.route("/skill")
 def skill():
     return render_template("skill.html")
+
+@view.route("/projects")
+def projects():
+    return render_template("projects.html")
