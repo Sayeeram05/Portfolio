@@ -25,3 +25,7 @@ def education():
 @view.route("/certification")
 def certification():
     return render_template("certification.html")
+
+@view.route("/contact")
+def contact():
+    return render_template("contact.html")
