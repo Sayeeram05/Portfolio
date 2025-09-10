@@ -11,13 +11,13 @@
 <body>
     <nav>
       <ul class="navbar">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutMe">About Me</a></li>
-        <li><a href="/skill">Skills</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/education">Education</a></li>
-        <li><a href="/certification">Certification</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a></li>
+        <li><a href="/aboutMe" class="{{ 'active' if request.path == '/aboutMe' else '' }}">About Me</a></li>
+        <li><a href="/skill" class="{{ 'active' if request.path == '/skill' else '' }}">Skills</a></li>
+        <li><a href="/projects" class="{{ 'active' if request.path == '/projects' else '' }}">Projects</a></li>
+        <li><a href="/education" class="{{ 'active' if request.path == '/education' else '' }}">Education</a></li>
+        <li><a href="/certification" class="{{ 'active' if request.path == '/certification' else '' }}">Certification</a></li>
+        <li><a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a></li>
       </ul>
     </nav>
 

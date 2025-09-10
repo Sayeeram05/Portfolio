@@ -1,0 +1,3 @@
+# Ignore image folder and resume.pdf
+website/static/img/
+website/static/resume.pdf

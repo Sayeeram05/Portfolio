@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Home | Sayeeram R - Backend Python Developer Portfolio</title>
+<title>Home | Sayeeram R </title>
 <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 {% endblock %}
 
 {% block body %}
 <div class="home-container">
   <div class="home-intro home-intro-vertical">
-    <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Sayeeram R" class="profile-img profile-img-large">
+    <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Sayeeram R" class="profile-img profile-img-large">
     <div class="intro-text">
       <h1>Sayeeram R</h1>
       <h2>Software Developer | Python, Java &amp; AI/ML Enthusiast</h2>
