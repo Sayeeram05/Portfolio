@@ -1,32 +1,42 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Projects | Sayeeram R</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
-{% endblock %}
-
-{% block body %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='projects.css') }}"
+/>
+{% endblock %} {% block body %}
 <section id="projects">
   <h2 class="projects-title">Projects</h2>
   <div class="projects-container">
     <!-- Project 1 -->
     <div class="project-card">
       <div class="project-front">
-        <h3>CashBook</h3>
-        <div class="project-icon">💰</div>
+        <h3>Card Stock & Billing System</h3>
+        <div class="project-icon">🧾</div>
       </div>
       <div class="project-back">
-        <h3>CashBook</h3>
-        <p><strong>Description:</strong> Expense tracker desktop app for managing personal finances.</p>
-        <p><strong>Tech Stack:</strong> Java Swing, MySQL</p>
-        <p><strong>Type:</strong> Academic</p>
+        <h3>Card Stock & Billing</h3>
+        <p>
+          <strong>Description:</strong> Designed and developed an Inventory and
+          Billing Management System to manage card stock, streamline billing
+          operations, track daily sales, and send low-stock alerts, improving
+          efficiency and accuracy in retail operations.
+        </p>
+        <p>
+          <strong>Tech Stack:</strong> Python, Django, MySQL, HTML, CSS,
+          JavaScript, Git, Github, VS Code
+        </p>
+        <p><strong>Type:</strong> Inventory Management</p>
         <div class="project-links">
-          <a href="https://github.com/Sayeeram05/Java-Language/tree/main/Projects/Cash_Book" target="_blank">GitHub</a>
-          <a href="/projects/cashbook">Learn More</a>
+          <a
+            href="https://github.com/Sayeeram05/Backed-Development/tree/main/Django/Project/Cards"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>
-    
+
     <!-- Project 2 -->
     <div class="project-card">
       <div class="project-front">
@@ -34,35 +44,54 @@
         <div class="project-icon">📝</div>
       </div>
       <div class="project-back">
-        <h3>Text Summarizer</h3>
-        <p><strong>Description:</strong> NLP-based tool for summarizing text from multiple sources.</p>
-        <p><strong>Tech Stack:</strong> Python, NLP, Flask</p>
-        <p><strong>Type:</strong> Personal</p>
+        <h3>CMTS</h3>
+        <p>
+          <strong>Description:</strong> Built a Cross-Modality Text
+          Summarization using PyTesseract (OCR) and transformer-based NLP models
+          (BART) to extract and generate concise summaries from images.
+        </p>
+        <p>
+          <strong>Tech Stack:</strong> Java, Java Swing, Python, Numpy, Pandas,
+          OCR, NLP, BART, PyTesseract
+        </p>
+        <p><strong>Type:</strong> ML / NLP / Computer Vision</p>
         <div class="project-links">
-          <a href="https://github.com/Sayeeram05/Cross-Modality-Text-Summarizer" target="_blank">GitHub</a>
-          <a href="/projects/text-summarizer">Learn More</a>
+          <a
+            href="https://github.com/Sayeeram05/Cross-Modality-Text-Summarizer"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>
-    
+
     <!-- Project 3 -->
     <div class="project-card">
       <div class="project-front">
-        <h3>Payroll Management System</h3>
-        <div class="project-icon">💼</div>
+        <h3>CashBook</h3>
+        <div class="project-icon">💰</div>
       </div>
       <div class="project-back">
-        <h3>Payroll System</h3>
-        <p><strong>Description:</strong> Web app for payroll automation and employee management.</p>
-        <p><strong>Tech Stack:</strong> Flask, SQLite, HTML/CSS</p>
-        <p><strong>Type:</strong> Academic</p>
+        <h3>CashBook</h3>
+        <p>
+          <strong>Description:</strong> Built a desktop-based expense tracking
+          application with secure login/logout authentication. Designed an
+          interactive dashboard for real-time income, expense, and balance
+          tracking. Implemented modules for Cash In, Cash Out, Category
+          Management, and Record Deletion.
+        </p>
+        <p><strong>Tech Stack:</strong> Java Swing, MySQL</p>
+        <p><strong>Type:</strong> Expense Tracker</p>
         <div class="project-links">
-          <a href="https://github.com/Sayeeram05/PayrollSystem" target="_blank">GitHub</a>
-          <a href="/projects/payroll">Learn More</a>
+          <a
+            href="https://github.com/Sayeeram05/Java-Language/tree/main/Projects/Cash_Book"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>
-    
+
     <!-- Project 4 -->
     <div class="project-card">
       <div class="project-front">
@@ -71,12 +100,21 @@
       </div>
       <div class="project-back">
         <h3>Restaurant Chatbot</h3>
-        <p><strong>Description:</strong> AI chatbot for restaurant recommendations using NLP.</p>
-        <p><strong>Tech Stack:</strong> Python, Flask, NLP</p>
-        <p><strong>Type:</strong> Hackathon</p>
+        <p>
+          <strong>Description:</strong> Developed a Restaurant Recommendation
+          Chatbot using Natural Language Processing (NLP) and a Feedforward
+          Neural Network (FFNN) to analyze user preferences and suggest the top
+          10 restaurants; utilized structured JSON for efficient data
+          management, enabling fast and flexible querying.
+        </p>
+        <p>
+          <strong>Tech Stack:</strong> Python, NLP, Feedforward Neural Network
+        </p>
+        <p><strong>Type:</strong> Artificial Intelligence</p>
         <div class="project-links">
-          <a href="https://github.com/Sayeeram05/ChatBot" target="_blank">GitHub</a>
-          <a href="/projects/restaurant-chatbot">Learn More</a>
+          <a href="https://github.com/Sayeeram05/ChatBot" target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>

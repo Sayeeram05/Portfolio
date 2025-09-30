@@ -1,19 +1,21 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Contact | Sayeeram R</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-{% endblock %}
-
-{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+{% endblock %} {% block body %}
 <section id="contact">
   <h2 class="contact-title">Get In Touch</h2>
-  
+
   <div class="contact-container">
     <!-- Left Column - Contact Info -->
     <div class="contact-info-column">
-      <div class="contact-card email" onclick="window.location.href='mailto:yourname@gmail.com'">
+      <div
+        class="contact-card email"
+        onclick="window.location.href='mailto:yourname@gmail.com'"
+      >
         <div class="icon-wrapper">
           <i class="fas fa-envelope"></i>
         </div>
@@ -23,8 +25,11 @@
           <p class="secondary">sayeerampr0550@srmist.edu.in</p>
         </div>
       </div>
-      
-      <div class="contact-card linkedin" onclick="window.open('https://www.linkedin.com/in/sayeeram-r-913b82267/', '_blank')">
+
+      <div
+        class="contact-card linkedin"
+        onclick="window.open('https://www.linkedin.com/in/sayeeram-r-913b82267/', '_blank')"
+      >
         <div class="icon-wrapper">
           <i class="fab fa-linkedin-in"></i>
         </div>
@@ -33,8 +38,11 @@
           <p>linkedin.com/in/sayeeram-r-913b82267</p>
         </div>
       </div>
-      
-      <div class="contact-card github" onclick="window.open('https://github.com/Sayeeram05', '_blank')">
+
+      <div
+        class="contact-card github"
+        onclick="window.open('https://github.com/Sayeeram05', '_blank')"
+      >
         <div class="icon-wrapper">
           <i class="fab fa-github"></i>
         </div>
@@ -43,8 +51,11 @@
           <p>github.com/Sayeeram05</p>
         </div>
       </div>
-      
-      <div class="contact-card leetcode" onclick="window.open('https://leetcode.com/u/N66XDZZmOM/', '_blank')">
+
+      <div
+        class="contact-card leetcode"
+        onclick="window.open('https://leetcode.com/u/N66XDZZmOM/', '_blank')"
+      >
         <div class="icon-wrapper">
           <i class="fas fa-code"></i>
         </div>
@@ -53,8 +64,11 @@
           <p>leetcode.com/N66XDZZmOM</p>
         </div>
       </div>
-      
-      <div class="contact-card hackerrank" onclick="window.open('https://www.hackerrank.com/profile/sr61721', '_blank')">
+
+      <div
+        class="contact-card hackerrank"
+        onclick="window.open('https://www.hackerrank.com/profile/sr61721', '_blank')"
+      >
         <div class="icon-wrapper">
           <i class="fab fa-hackerrank"></i>
         </div>
@@ -62,39 +76,6 @@
           <h3>HackerRank</h3>
           <p>hackerrank.com/sr61721</p>
         </div>
-      </div>
-    </div>
-    
-    <!-- Right Column - Contact Form -->
-    <div class="message-column">
-      <div class="message-container">
-        <h3 class="message-title">Send a Message</h3>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span class="btn-text">Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, views
+from flask import Blueprint, render_template, views, request, flash, redirect, url_for
 
 view = Blueprint("view",__name__)
 
@@ -27,5 +27,5 @@ def certification():
     return render_template("certification.html")
 
 @view.route("/contact")
-def contact():
+def contact():      
     return render_template("contact.html")
